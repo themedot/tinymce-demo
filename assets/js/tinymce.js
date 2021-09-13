@@ -21,6 +21,46 @@
                this.value('You have selected <em>Apple</em>');
             }
         });
+
+        editor.addButton('tmcd_form_button',{
+            text:'Form',
+            onclick:function(){
+                editor.windowManager.open({
+                    title:"User Input Form",
+                    body:[
+                        {
+                            type:'textbox',
+                            name: 'userinput1',
+                            label: 'Some text',
+                            value: 'hello'
+                        },
+                        {
+                            type:'colorpicker',
+                            name: 'userinput2',
+                            label: 'Color',
+                            value: '#222222'
+                        },
+                        {
+                            type:'listbox',
+                            name: 'userinput3',
+                            label: 'Options',
+                            values: [
+                                {text:'Option 1', value :1},
+                                {text:'Option 2', value :2},
+                                {text:'Option 3', value :3},
+                            ]
+                        }
+                    ],
+                    onsubmit:function(e){
+                        console.log(e.data.userinput1);
+                        console.log(e.data.userinput2);
+                        editor.insertContent("Text = "+e.data.userinput1 + "Color = "+e.data.userinput2);
+                    }
+                })
+            }
+            
+            
+        });
         editor.addButton('tmcd_menu',{
             type: 'menubutton',
             text:'Choices',

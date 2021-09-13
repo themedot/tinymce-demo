@@ -26,6 +26,7 @@ function tmcd_mce_buttons($buttons){
     $buttons[] = 'tmcd_button_one';
     $buttons[] = 'tmcd_button_two';
     $buttons[] = 'tmcd_menu';
+    $buttons[] = 'tmcd_form_button';
     return $buttons;
 }
 
