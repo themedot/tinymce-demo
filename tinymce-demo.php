@@ -24,6 +24,7 @@ function tmcd_mce_external_plugins($plugins){
 
 function tmcd_mce_buttons($buttons){
     $buttons[] = 'tmcd_button_one';
+    $buttons[] = 'tmcd_button_two';
     return $buttons;
 }
 
