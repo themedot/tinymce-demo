@@ -21,5 +21,64 @@
                this.value('You have selected <em>Apple</em>');
             }
         });
+        editor.addButton('tmcd_menu',{
+            type: 'menubutton',
+            text:'Choices',
+            
+            menu:[
+                {
+                    text:"Option A",
+                    menu:[
+                        {
+                            text:"Option A - 1",
+                            onclick:function(){
+                                console.log("Option A - 1")
+                            }
+                        },
+                        {
+                            text:"Option A - 2",
+                            onclick:function(){
+                                console.log("Option A - 2")
+                            }
+                        },
+                        {
+                            text:"Option A - 3",
+                            onclick:function(){
+                                console.log("Option A - 3")
+                            }
+                        }
+                    ]
+                },
+                {
+                    text:"Option B",
+                    onclick:function(){
+                        console.log('this from a')
+                    }
+                },
+                {
+                    text:"Option C",
+                    menu:[
+                        {
+                            text:"Option C - 1",
+                            onclick:function(){
+                                console.log("Option C - 1")
+                            }
+                        },
+                        {
+                            text:"Option C - 2",
+                            onclick:function(){
+                                console.log("Option C - 2")
+                            }
+                        },
+                        {
+                            text:"Option C - 3",
+                            onclick:function(){
+                                console.log("Option C - 3")
+                            }
+                        }
+                    ]
+                },
+            ]
+        });
     });
 })();
